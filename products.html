@@ -14,30 +14,272 @@
 
 <body>
 
-<header>
-    <h1>Online Cafe</h1>
+<img src="assets/images/large-beans.jpg" class="beans-bg">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="categories.html">Categories</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        <div class="page-wrapper">
 
+        <div class="content-container">
+
+           <header class="navbar">
+
+            <div class="nav-group">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="categories.html">Categories</a>
+
+                <a href="index.html">
+                    <img src="assets/images/logo.png" class="nav-logo">
+                </a>
+
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+
+                <input type="text" placeholder="Search..." class="search-bar" id="search-input">
+
+            </div>
+
+        </header>
 <main>
 
-<section>
-    <h2>Welcome to Our Online Cafe</h2>
-    <p>Fresh coffee, delicious snacks, and a cosy experience.</p>
+    <div class="sort-container">
+
+<label>Sort by:</label>
+
+<select id="sort-price">
+    <option value="">Default</option>
+    <option value="low">Price: Low to High</option>
+    <option value="high">Price: High to Low</option>
+</select>
+
+</div>
+
+<section id="hot" class="products-section">
+
+<h2>Hot Coffee</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="assets/images/espresso.jpeg">
+<h3>Espresso</h3>
+<p class="price">£2.80</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/latte.jpeg">
+<h3>Latte</h3>
+<p class="price">£3.90</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/cappuccino.png">
+<h3>Cappuccino</h3>
+<p class="price">£3.50</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/americano.jpeg">
+<h3>Americano</h3>
+<p class="price">£3.20</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/mocha.jpeg">
+<h3>Mocha</h3>
+<p class="price">£4.10</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/flatwhite.jpeg">
+<h3>Flat White</h3>
+<p class="price">£3.70</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="cold" class="products-section">
+
+<h2>Cold Coffee</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="assets/images/iced-latte.jpeg">
+<h3>Iced Latte</h3>
+<p class="price">£4.10</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/cold-brew.webp">
+<h3>Cold Brew</h3>
+<p class="price">£3.90</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/iced-americano.jpeg">
+<h3>Iced Americano</h3>
+<p class="price">£3.60</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/frappuccino.jpeg">
+<h3>Frappuccino</h3>
+<p class="price">£4.50</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/iced-mocha.jpeg">
+<h3>Iced Mocha</h3>
+<p class="price">£4.20</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/caramel-iced-coffee.jpeg">
+<h3>Caramel Iced Coffee</h3>
+<p class="price">£4.40</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="beans" class="products-section">
+
+<h2>Coffee Beans</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="assets/images/arabica.jpeg">
+<h3>Arabica Beans</h3>
+<p class="price">£12.00</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/colombian.jpg">
+<h3>Colombian Roast</h3>
+<p class="price">£11.50</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/ethiopian.jpg">
+<h3>Ethiopian Beans</h3>
+<p class="price">£13.00</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/brazilian.webp">
+<h3>Brazilian Roast</h3>
+<p class="price">£10.90</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/dark-roast.jpeg">
+<h3>Dark Roast Beans</h3>
+<p class="price">£12.50</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/house-blend.png">
+<h3>House Blend</h3>
+<p class="price">£11.80</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="pastries" class="products-section">
+
+<h2>Pastries</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="assets/images/croissant.webp">
+<h3>Butter Croissant</h3>
+<p class="price">£2.80</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/chocolate-muffin.jpg">
+<h3>Chocolate Muffin</h3>
+<p class="price">£3.00</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/cinnamon-roll.jpeg">
+<h3>Cinnamon Roll</h3>
+<p class="price">£3.20</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/blueberry-muffin.jpg">
+<h3>Blueberry Muffin</h3>
+<p class="price">£3.00</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/cheese-danish.jpg">
+<h3>Cheese Danish</h3>
+<p class="price">£3.40</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="assets/images/almond-croissant.jpg">
+<h3>Almond Croissant</h3>
+<p class="price">£3.50</p>
+<button class="add-cart">Add to Cart</button>
+</div>
+
+</div>
+
 </section>
 
 </main>
 
+</div>
+</div>
+
 <footer>
     <p>© 2026 Online Cafe</p>
 </footer>
+
+<script src="assets/js/script.js"></script>
+
+<div id="popup">Item added to cart ✓</div>
+
+<div class="floating-cart">
+    <a href="cart.html">
+        🛒 <span id="cart-count">0</span>
+    </a>
+</div>
 
 </body>
 </html>

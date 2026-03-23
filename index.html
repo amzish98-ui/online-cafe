@@ -1,43 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Cafe</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brew Pod Coffee House</title>
 
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
+        <link rel="stylesheet" href="assets/css/base.css">
+        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="stylesheet" href="assets/css/components.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
 
-<body>
+    <body>
 
-<header>
-    <h1>Online Cafe</h1>
+<!-- NAVBAR -->
+<img src="assets/images/large-beans.jpg" class="beans-bg">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="categories.html">Categories</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        <div class="page-wrapper">
 
-<main>
+        <div class="content-container">
 
-<section>
-    <h2>Welcome to Our Online Cafe</h2>
-    <p>Fresh coffee, delicious snacks, and a cosy experience.</p>
+           <header class="navbar">
+
+            <div class="nav-group">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="categories.html">Categories</a>
+
+                <a href="index.html">
+                    <img src="assets/images/logo.png" class="nav-logo">
+                </a>
+
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+
+                <input type="text" placeholder="Search..." class="search-bar" id="search-input">
+
+            </div>
+
+        </header>
+    
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <h1>Fresh Brew Coffee</h1>
+
+                <p>
+Experience the rich aroma and flavour of freshly brewed coffee
+made from the finest beans.
+                </p>
+
+                <a href="products.html" class="hero-btn">Explore Coffee</a>
+
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/images/coffee-cup.jpeg" alt="Coffee Cup">
+            </div>
+
+        </section>
+
+<section class="featured">
+
+        <h2>Featured Coffee</h2>
+
+    <div class="coffee-grid">
+        
+        <a href="products.html#hot">
+
+            <div class="coffee-card">
+
+                <img src="assets/images/espresso.jpeg">
+                <h3>Espresso</h3>
+                <p>£3.50</p>
+
+            </div>
+
+        </a>
+
+        <a href="products.html#hot">
+
+            <div class="coffee-card">
+
+            <img src="assets/images/latte.jpeg">
+            <h3>Latte</h3>
+            <p>£4.00</p>
+
+            </div>
+
+        </a>
+
+        <a href="products.html#hot">
+        
+            <div class="coffee-card">
+
+                <img src="assets/images/cappuccino.png">
+                <h3>Cappuccino</h3>
+                <p>£3.80</p>
+        
+            </div>
+
+        </a>
+
+
+    </div>
+
 </section>
 
-</main>
+<section class="categories">
 
-<footer>
-    <p>© 2026 Online Cafe</p>
+    <h2>Coffee Categories</h2>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+
+            <h3>Hot Coffee</h3>
+            <p>Freshly brewed hot drinks.</p>
+
+        </div>
+
+        <div class="category-card">
+
+            <h3>Cold Coffee</h3>
+            <p>Refreshing iced coffee drinks.</p>
+
+        </div>
+
+        <div class="category-card">
+
+            <h3>Coffee Beans</h3>
+            <p>Premium roasted beans.</p>
+        </div>
+
+        <div class="category-card">
+            
+            <h3>Pastries</h3>
+            <p>Perfect snacks with coffee.</p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="about-preview">
+
+    <h2>About Our Coffee</h2>
+
+    <p>
+At Brew Pod Coffee we believe every cup tells a story.
+Our beans are carefully sourced from the finest farms
+to create rich, aromatic coffee that brightens your day.
+</p>
+
+<a href="about.html" class="hero-btn">Learn More</a>
+
+</section>
+
+<section class="reviews">
+
+    <h2>What Our Customers Say</h2>
+
+    <div class="review-grid">
+
+        <div class="review-card">
+            
+            <p>"Best coffee I've had in years!"</p>
+            <h4>- Sarah</h4>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <p>"Amazing atmosphere and fantastic espresso."</p>
+            <h4>- James</h4>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <p>"My favourite coffee spot every morning."</p>
+            <h4>- Daniel</h4>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Ready for Your Perfect Cup?</h2>
+
+  <div class="cta-button">
+    <a href="products.html" class="hero-btn">Order Coffee</a>
+</div>
+
+</section>
+
+<footer class="footer">
+
+    <h3>Brew Pod Coffee</h3>
+    <p>Mon - Fri: 8am - 6pm</p>
+    <p>Sat - Sun: 9am - 5pm</p>
+    <p>© 2026 Brew Pod Coffee</p>
+
 </footer>
 
-</body>
+    <script src="assets/js/script.js"></script>
+
+    <div class="floating-cart">
+    <a href="cart.html">
+        🛒 <span id="cart-count">0</span>
+    </a>
+</div>
+
+    </body>
 </html>
