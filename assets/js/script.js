@@ -1,10 +1,24 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartCount = document.getElementById("cart-count");
 
+function updateCartCount(){
+
 if(cartCount){
-cartCount.innerText = cart.length;
+
+let total = cart.reduce((sum,item)=> sum + item.quantity, 0);
+
+cartCount.innerText = total;
+
 }
+
+}
+
+// RUN ON PAGE LOAD
+updateCartCount();
+renderCart();
 
 const buttons = document.querySelectorAll(".add-cart");
 
@@ -13,22 +27,25 @@ buttons.forEach(function(button){
 button.addEventListener("click", function(){
 
 let name = button.parentElement.querySelector("h3").innerText;
-
 let priceText = button.parentElement.querySelector(".price").innerText;
-
 let price = parseFloat(priceText.replace("£",""));
 
-let product = {
-name: name,
-price: price
-};
+let existing = cart.find(item => item.name === name);
 
-cart.push(product);
+if(existing){
+existing.quantity += 1;
+}else{
+cart.push({
+name: name,
+price: price,
+quantity: 1
+});
+}
 
 localStorage.setItem("cart", JSON.stringify(cart));
 
 if(cartCount){
-cartCount.innerText = cart.length;
+cartCount.innerText = cart.reduce((sum,item)=> sum + item.quantity,0);
 }
 
 showPopup();
@@ -40,10 +57,12 @@ showPopup();
 function showPopup(){
 
 let popup = document.getElementById("popup");
-if(!popup) return;
-popup.classList.add("show");
-setTimeout(function(){
 
+if(!popup) return;
+
+popup.classList.add("show");
+
+setTimeout(function(){
 popup.classList.remove("show");
 },2000);
 
@@ -52,46 +71,33 @@ popup.classList.remove("show");
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 
-if(cartItems){
+document.addEventListener("click", function(e){
 
-cartItems.innerHTML = "";
+if(e.target.classList.contains("increase")){
 
-let total = 0;
-
-cart.forEach(function(item,index){
-
-let div = document.createElement("div");
-
-div.innerHTML = `
-${item.name} - £${item.price}
-<button class="remove-item" data-index="${index}">Remove</button>
-`;
-
-cartItems.appendChild(div);
-
-total += item.price;
-
-});
-
-if(cartTotal){
-cartTotal.innerText = total.toFixed(2);
-}
+let index = e.target.dataset.index;
+cart[index].quantity += 1;
 
 }
 
-document.addEventListener("click",function(e){
-
-if(e.target.classList.contains("remove-item")){
+if(e.target.classList.contains("decrease")){
 
 let index = e.target.dataset.index;
 
+cart[index].quantity -= 1;
+
+if(cart[index].quantity <= 0){
 cart.splice(index,1);
-
-localStorage.setItem("cart",JSON.stringify(cart));
-
-location.reload();
+}
 
 }
+
+// SAVE
+localStorage.setItem("cart", JSON.stringify(cart));
+
+// ✅ UPDATE UI PROPERLY
+updateCartCount();
+renderCart();
 
 });
 
@@ -105,7 +111,7 @@ dropdown.innerHTML = "<p>Your cart is empty</p>";
 
 cart.forEach(function(item){
 let p = document.createElement("p");
-p.innerText = item;
+p.innerText = item.name + " x" + item.quantity;
 dropdown.appendChild(p);
 
 });
@@ -140,19 +146,27 @@ orderNumber = 1;
 
 localStorage.setItem("orderNumber", orderNumber);
 
+// CLEAR CART
 cart = [];
 localStorage.removeItem("cart");
 
+// SHOW MESSAGE
 if(message){
 message.innerText = "✓ Order placed! Your order number is #" + orderNumber;
 }
 
-setTimeout(function(){
-location.reload();
-},3000);
+// CLEAR UI (NO RELOAD)
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+if(cartItems) cartItems.innerHTML = "";
+if(cartTotal) cartTotal.innerText = "0";
+
+// RESET CART COUNT
+const cartCount = document.getElementById("cart-count");
+if(cartCount) cartCount.innerText = "0";
 
 });
-
 }
 
 const searchInput = document.getElementById("search-input");
@@ -230,6 +244,90 @@ grid.appendChild(card);
 
 });
 
+});
+
+}
+
+function renderCart(){
+
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+if(!cartItems) return;
+
+cartItems.innerHTML = "";
+
+let total = 0;
+
+cart.forEach(function(item,index){
+
+let div = document.createElement("div");
+
+div.classList.add("cart-row");
+
+div.innerHTML = `
+<span>${item.name}</span>
+
+<div class="qty-controls">
+<button class="decrease" data-index="${index}">-</button>
+<span>${item.quantity}</span>
+<button class="increase" data-index="${index}">+</button>
+</div>
+
+<span>£${(item.price * item.quantity).toFixed(2)}</span>
+`;
+
+cartItems.appendChild(div);
+
+total += item.price * item.quantity;
+
+});
+
+if(cartTotal){
+cartTotal.innerText = total.toFixed(2);
+}
+
+}
+
+// mobile/tablet //
+
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+if(hamburger){
+    hamburger.addEventListener("click", function(){
+        navMenu.classList.toggle("active");
+    });
+}
+
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+if(toggle && menu){
+    toggle.addEventListener("click", function(){
+        menu.classList.toggle("active");
+    });
+}
+
+});
+
+const mobileBtn = document.getElementById("mobile-menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+const closeMenu = document.getElementById("close-menu");
+
+if(mobileBtn && mobileMenu){
+
+mobileBtn.addEventListener("click", function(){
+mobileMenu.classList.add("active");
+});
+
+}
+
+if(closeMenu){
+
+closeMenu.addEventListener("click", function(){
+mobileMenu.classList.remove("active");
 });
 
 }

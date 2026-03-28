@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
 
-<title>Your Cart</title>
-
-<link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -23,7 +22,7 @@
 
         <header class="navbar">
 
-            <div class="nav-group">
+            <div class="nav-group" id="nav-menu">
 
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -38,13 +37,13 @@
 
                 <input type="text" placeholder="Search..." class="search-bar" id="search-input">
 
-                <div class="cart-container">
-
-                    <div class="cart-dropdown" id="cart-dropdown">
-                        <p>Your cart is empty</p>
-                    </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    ☰
                 </div>
 
+            <div class="cart-dropdown" id="cart-dropdown">
+                        <p>Your cart is empty</p>
+                    </div>
                 </div>
 
         </header>

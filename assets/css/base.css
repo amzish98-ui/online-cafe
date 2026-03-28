@@ -332,3 +332,178 @@ border-radius:10px;
 margin-bottom:10px;
 
 }
+
+.cart-row{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:10px 0;
+border-bottom:1px solid rgba(255,255,255,0.1);
+
+}
+
+.cart-row span:first-child{
+
+flex:1; /* pushes everything nicely */
+text-align:left;
+
+}
+
+.cart-row span:last-child{
+
+flex:1;
+text-align:right;
+
+}
+
+.qty-controls{
+
+display:flex;
+align-items:center;
+gap:8px;
+
+flex:1;
+justify-content:center;
+
+}
+
+.qty-controls button{
+
+background:#8B4513;
+
+color:white;
+
+border:none;
+
+padding:5px 10px;
+
+cursor:pointer;
+
+border-radius:5px;
+
+}
+
+/* Hamburger menu */
+
+.menu-toggle{
+display:none;
+font-size: 26px;
+color: white;
+cursor: pointer;
+}
+
+@media (max-width:768px){
+
+/* show hamburger */
+.menu-toggle{
+display:block;
+}
+
+/* stack navbar */
+.nav-group{
+flex-direction:column;
+align-items:center;
+width:100%;
+max-width:900px;
+flex-wrap:wrap;
+}
+
+/* hide everything except hamburger */
+.nav-group a,
+.nav-group input{
+display:none;
+}
+
+/* show when active */
+.nav-group.active a,
+.nav-group.active input{
+display:block;
+margin:10px 0;
+}
+
+}
+
+@media (max-width:1024px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+gap:30px;
+}
+
+.hero-text{
+margin-bottom:20px;
+}
+
+}
+
+.categories{
+text-align:center;
+}
+
+.category-grid{
+justify-content:center;
+}
+
+.category-grid{
+max-width:900px;
+margin:0 auto;
+}
+
+body{
+overflow-x:hidden;
+}
+
+.content-container{
+width:100%;
+max-width:1200px;
+margin:0 auto;
+padding:20px; /* smaller for mobile */
+box-sizing:border-box;
+}
+
+/* NAV LINKS */
+.nav-links{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+/* HAMBURGER */
+.menu-toggle{
+display:none;
+font-size:26px;
+color:white;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+width:100%;
+text-align:center;
+background:#6b3e26;
+padding:15px 0;
+border-radius:10px;
+margin-top:10px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+
+html, body{
+overflow-x: hidden;
+max-width: 100%;
+}

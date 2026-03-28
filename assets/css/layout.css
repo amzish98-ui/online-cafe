@@ -5,7 +5,9 @@ padding:60px 0;
 }
 
 .content-container{
-width:1200px;
+max-width: 1200px;
+width: 90%;
+margin: 0 auto;
 background:#f8f5f2;
 border-radius:25px;
 padding:40px;
@@ -40,7 +42,8 @@ gap: 20px;
 background:#6b3e26;
 padding:14px 40px;
 border-radius:50px;
-width:900px;
+width:100%;
+max-width:900px;
 margin:0 auto;
 }
 
@@ -131,7 +134,8 @@ background:#8a5537;
 
 .hero-image img{
 
-width:350px;
+max-width:100%;
+height:auto;
 border-radius:20px;
 box-shadow:0 20px 40px rgba(0,0,0,0.4);
 
