@@ -446,3 +446,34 @@ p {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.feature-card,
+.product-card,
+.cart-summary {
+  background: #1a1a1a !important;
+}
+
+.feature-card h3,
+.feature-card p,
+.product-card h3,
+.cart-summary h3,
+.cart-summary p {
+  color: #ffffff !important;
+}
+
+.product-card .price {
+  color: #d2a679 !important;
+}
+
+.hero-text h1 {
+  color: #ffffff !important;
+}
+
+.hero-text p {
+  color: #eeeeee !important;
+}
+
+.featured h2,
+.categories h2 {
+  color: #ffffff !important;
+}
