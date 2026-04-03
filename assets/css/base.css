@@ -454,3 +454,13 @@ p {
 .products-section h2 {
   color: #d2a679 !important;
 }
+
+.category-card h3,
+.category-card p {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.category-card {
+  text-decoration: none !important;
+}
