@@ -196,7 +196,7 @@ display:block;
 .close-btn {
   position: absolute;
   top: 20px;
-  right: 20px;
+  left: 20px;
   font-size: 26px;
   color: white;
   cursor: pointer;

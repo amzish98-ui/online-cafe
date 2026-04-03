@@ -277,3 +277,104 @@ html {
   pointer-events: none;
   z-index: -1;
 }
+
+h1, h2, h3, h4 {
+  color: #ffffff;
+}
+
+p {
+  color: #dddddd;
+}
+
+.hero-text h1 {
+  color: #ffffff;
+}
+
+.hero-text p {
+  color: #dddddd;
+}
+
+.review-card p,
+.review-card h4 {
+  color: #ffffff;
+}
+
+.review-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.category-card h3,
+.category-card p {
+  color: #ffffff;
+}
+
+.coffee-card h3,
+.coffee-card p {
+  color: #ffffff;
+}
+
+.about-preview h2,
+.about-preview p {
+  color: #ffffff;
+}
+
+.cta h2 {
+  color: #ffffff;
+}
+
+.footer {
+  color: #dddddd;
+}
+
+.hero-text h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero-text p {
+  color: #f0f0f0 !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+.featured h2,
+.categories h2,
+.about-preview h2,
+.reviews h2,
+.cta h2 {
+  color: #ffffff !important;
+}
+
+.about-preview p {
+  color: #eeeeee !important;
+}
+
+.coffee-card h3 {
+  color: #ffffff !important;
+}
+
+.coffee-card p {
+  color: #d2a679 !important;
+}
+.feature-card {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+.feature-card h3 {
+  color: #ffffff !important;
+}
+
+.feature-card p {
+  color: #dddddd !important;
+}
+
+.search-bar {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
